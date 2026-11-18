@@ -1,0 +1,8 @@
+17:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+31:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+4b:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+65:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+98:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+b1:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+ca:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)
+e3:00.0 3D controller [0302]: NVIDIA Corporation GA102GL [A40] [10de:2235] (rev a1)

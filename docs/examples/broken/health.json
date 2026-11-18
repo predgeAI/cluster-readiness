@@ -1,0 +1,201 @@
+{
+  "node": "gpu-h100-07",
+  "state": "failing",
+  "exit_code": 2,
+  "checks": [
+    {
+      "id": "gpu.count",
+      "title": "All GPUs visible to the driver",
+      "status": "fail",
+      "observed": {
+        "nvidia_smi": 7,
+        "lspci": 8,
+        "expected": 8
+      },
+      "reason": "7 GPUs visible to nvidia-smi, 8 expected (lspci sees more: a GPU has likely fallen off the bus)",
+      "fix": "Drain the node, collect nvidia-bug-report.sh, reseat or RMA the missing GPU.",
+      "criteria": [
+        "REL-4"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.model",
+      "title": "GPU model matches what was sold",
+      "status": "pass",
+      "observed": {
+        "reported": [
+          "NVIDIA H100 80GB HBM3"
+        ],
+        "expected": "H100"
+      },
+      "reason": "",
+      "fix": "",
+      "criteria": [
+        "LIF-4"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.throttle",
+      "title": "No hardware clock throttling",
+      "status": "fail",
+      "observed": {
+        "5": [
+          "HwSlowdown",
+          "HwThermalSlowdown"
+        ]
+      },
+      "reason": "Hardware slowdown active: GPU5: HwSlowdown,HwThermalSlowdown",
+      "fix": "Check cooling, fans, PSU and power capping on this node; drain until clocks recover.",
+      "criteria": [
+        "REL-16",
+        "REL-7"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.temperature",
+      "title": "GPU temperatures within limits",
+      "status": "fail",
+      "observed": {
+        "max_c": 91.0,
+        "per_gpu": {
+          "0": 38.0,
+          "1": 39.0,
+          "2": 40.0,
+          "3": 41.0,
+          "4": 42.0,
+          "5": 91.0,
+          "6": 44.0
+        }
+      },
+      "reason": "GPU temperature at or above 87 C on GPU 5",
+      "fix": "Inspect cooling for this chassis.",
+      "criteria": [
+        "REL-7",
+        "REL-16"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.ecc",
+      "title": "No uncorrectable ECC errors",
+      "status": "fail",
+      "observed": {
+        "2": 2.0
+      },
+      "reason": "Uncorrectable (volatile) ECC errors on GPU 2",
+      "fix": "Drain the node, reset the GPU (nvidia-smi -r) and run dcgmi diag -r 3; RMA if it repeats.",
+      "criteria": [
+        "REL-15",
+        "REL-8"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.row_remap",
+      "title": "No pending page retirement / row remapping",
+      "status": "warn",
+      "observed": {
+        "remap_failure": [],
+        "pending": [
+          2
+        ]
+      },
+      "reason": "Reset pending on GPU 2",
+      "fix": "Failed remap: RMA the GPU. Pending: drain and reset the GPU.",
+      "criteria": [
+        "REL-8",
+        "REL-15"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.pcie_link",
+      "title": "GPU PCIe link at full width",
+      "status": "pass",
+      "observed": {
+        "degraded": {},
+        "gen": [
+          5.0
+        ]
+      },
+      "reason": "Link generation may drop at idle; that is normal",
+      "fix": "",
+      "criteria": [
+        "REL-19",
+        "REL-5"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.nvlink",
+      "title": "All NVLink links up",
+      "status": "fail",
+      "observed": {
+        "total": 126,
+        "inactive": 4
+      },
+      "reason": "4 of 126 NVLink links inactive",
+      "fix": "Check fabric manager and NVSwitch health; drain the node.",
+      "criteria": [
+        "REL-13"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "gpu.xid",
+      "title": "No critical XID events this boot",
+      "status": "fail",
+      "observed": {
+        "source": "dmesg",
+        "xid_codes": [
+          48,
+          63,
+          79
+        ],
+        "count": 3
+      },
+      "reason": "XID 48 on 0000:3a:00 (Double-bit ECC error); XID 79 on 0000:9a:00 (GPU has fallen off the bus)",
+      "fix": "Drain the node; XID 79/48/95/64 need a GPU reset or RMA.",
+      "criteria": [
+        "REL-9",
+        "REL-4"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    },
+    {
+      "id": "ib.ports_up",
+      "title": "All RDMA ports active",
+      "status": "fail",
+      "observed": {
+        "active_fast_ports": 7,
+        "down": [
+          "mlx5_4/1 Down/Polling"
+        ]
+      },
+      "reason": "1 InfiniBand port(s) not Active: mlx5_4/1 Down/Polling",
+      "fix": "Check cable/transceiver and switch port; drain the node until the rail is back.",
+      "criteria": [
+        "REL-21",
+        "REL-10",
+        "REL-6"
+      ],
+      "source": "predge",
+      "node": "gpu-h100-07"
+    }
+  ],
+  "actions": [
+    "would run: scontrol update nodename=gpu-h100-07 state=drain 'reason=predge-ready: GPU missing (7/8), XID 48,63,79, uncorrectable ECC, IB port down, NVLink down'"
+  ]
+}

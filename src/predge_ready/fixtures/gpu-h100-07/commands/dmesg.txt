@@ -1,0 +1,12 @@
+[    0.000000] Linux version 6.5.0-41-generic (buildd@lcy02-amd64-108) #41~22.04.2-Ubuntu SMP PREEMPT_DYNAMIC
+[   15.318820] NVRM: loading NVIDIA UNIX x86_64 Kernel Module  535.183.01  Sun May 12 19:39:15 UTC 2024
+[ 5012.118233] NVRM: Xid (PCI:0000:3a:00): 48, pid=48213, name=python3, An uncorrectable double bit error (DBE) has been detected on GPU in the framebuffer at partition 6, subpartition 0.
+[ 5012.120011] NVRM: Xid (PCI:0000:3a:00): 63, pid=48213, name=python3, Row Remapping Event: Row remapped successfully.
+[ 6230.901112] mlx5_core 0000:9d:00.0: mlx5_port_module_event:1157:(pid 0): Port module event: module 0, Cable unplugged
+[ 6231.004318] mlx5_core 0000:9d:00.0 ibp157s0: Link down
+[ 8123.442101] NVRM: Xid (PCI:0000:9a:00): 79, pid='<unknown>', name=<unknown>, GPU has fallen off the bus.
+[ 8123.442180] NVRM: GPU 0000:9a:00.0: GPU has fallen off the bus.
+[ 8123.442201] NVRM: A GPU crash dump has been created. If possible, please run
+               NVRM: nvidia-bug-report.sh as root to collect this data before
+               NVRM: the NVIDIA kernel module is unloaded.
+[ 8301.551904] nvidia-nvswitch2: SXid (PCI:0000:07:00.0): 12028, Non-fatal, Link 32 egress non-posted PRIV error (First)

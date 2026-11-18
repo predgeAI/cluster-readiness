@@ -1,0 +1,14 @@
+Predge Cluster Readiness
+Copyright 2026 Predge
+
+This product is licensed under the Apache License, Version 2.0.
+
+src/predge_ready/data/minimums.json contains version floors taken from the
+minimum-versions.json file shipped in the "clustermax" 0.3.0 package
+(SemiAnalysis, Apache License 2.0). No other clustermax code is included;
+predge-ready calls the separately installed cmax CLI when present.
+
+src/predge_ready/data/criteria.json lists the publicly published ClusterMAX
+criteria (https://www.clustermax.ai/criteria) under Predge's own row IDs.
+ClusterMAX is a trademark of SemiAnalysis. This project is not affiliated
+with, endorsed by or sponsored by SemiAnalysis.

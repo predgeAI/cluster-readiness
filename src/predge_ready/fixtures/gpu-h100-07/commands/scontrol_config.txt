@@ -1,0 +1,15 @@
+Configuration data as of 2026-11-18T09:14:02
+AccountingStorageType   = accounting_storage/slurmdbd
+ClusterName             = gpu-prod
+GresTypes               = gpu
+HealthCheckInterval     = 0 sec
+HealthCheckNodeState    = ANY
+HealthCheckProgram      = (null)
+JobAcctGatherType       = jobacct_gather/cgroup
+MpiDefault              = none
+PlugStackConfig         = /etc/slurm/plugstack.conf
+ProctrackType           = proctrack/cgroup
+SelectType              = select/cons_tres
+SLURM_VERSION           = 24.05.4
+TaskPlugin              = task/affinity,task/cgroup
+TopologyPlugin          = topology/default

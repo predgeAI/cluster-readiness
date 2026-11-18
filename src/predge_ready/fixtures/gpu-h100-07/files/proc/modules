@@ -1,0 +1,7 @@
+mlx5_ib 487424 0 - Live 0x0000000000000000
+ib_uverbs 196608 2 nvidia_peermem,mlx5_ib, Live 0x0000000000000000
+ib_core 507904 4 nvidia_peermem,mlx5_ib,ib_uverbs,ib_umad, Live 0x0000000000000000
+mlx5_core 2420736 1 mlx5_ib, Live 0x0000000000000000
+nvidia_uvm 4972544 0 - Live 0x0000000000000000
+nvidia 99016704 120 nvidia_uvm,nvidia_peermem,nvidia_modeset, Live 0x0000000000000000
+nvidia_peermem 16384 0 - Live 0x0000000000000000

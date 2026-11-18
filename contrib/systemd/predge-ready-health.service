@@ -1,0 +1,12 @@
+[Unit]
+Description=Predge GPU node health check (predge-ready health)
+Documentation=https://github.com/predgeAI/cluster-readiness
+After=nvidia-persistenced.service nvidia-fabricmanager.service
+
+[Service]
+Type=oneshot
+# Exit 1 (warning) and 2 (failing) are results, not unit failures.
+SuccessExitStatus=1 2
+Environment=PREDGE_READY_ARGS=
+ExecStart=/bin/sh -c '/usr/local/bin/predge-ready health --drain --resume --quiet --textfile /var/lib/node_exporter/textfile_collector/predge_ready.prom $PREDGE_READY_ARGS'
+Nice=10

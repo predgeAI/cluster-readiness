@@ -1,0 +1,19 @@
+Configuration data as of 2026-11-18T09:12:44
+AccountingStorageType   = accounting_storage/slurmdbd
+ClusterName             = gpu-prod
+DefCpuPerGPU            = 24
+DefMemPerGPU            = 245760
+GresTypes               = gpu
+HealthCheckInterval     = 60 sec
+HealthCheckNodeState    = ANY
+HealthCheckProgram      = /usr/local/sbin/predge-ready-hc
+JobAcctGatherType       = jobacct_gather/cgroup
+MpiDefault              = pmix
+PlugStackConfig         = /etc/slurm/plugstack.conf
+Prolog                  = /etc/slurm/prolog.d/*
+ProctrackType           = proctrack/cgroup
+SelectType              = select/cons_tres
+SelectTypeParameters    = CR_CORE_MEMORY
+SLURM_VERSION           = 25.05.6
+TaskPlugin              = task/affinity,task/cgroup
+TopologyPlugin          = topology/block

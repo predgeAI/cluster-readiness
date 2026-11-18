@@ -1,0 +1,2 @@
+  File: "/home"
+    ID: 0        Namelen: 255     Type: nfs

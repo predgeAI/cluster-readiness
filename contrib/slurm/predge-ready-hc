@@ -1,0 +1,15 @@
+#!/bin/sh
+# Slurm HealthCheckProgram wrapper for predge-ready.
+# slurmd runs this as root with a minimal environment and ignores the exit
+# code, so the check drains the node itself (--drain) and resumes only nodes
+# it drained (--resume). Install to /usr/local/sbin/predge-ready-hc, mode 0755.
+PREDGE_READY="${PREDGE_READY:-/usr/local/bin/predge-ready}"
+TEXTFILE_DIR="${TEXTFILE_DIR:-/var/lib/node_exporter/textfile_collector}"
+NODE="${SLURMD_NODENAME:-$(hostname -s)}"
+# Optional: what this node must have, e.g. "gpu=H100,count=8,ib=8".
+EXPECT="${PREDGE_READY_EXPECT:-}"
+
+set -- health --drain --resume --drain-mode slurm --quiet --node-name "$NODE"
+[ -n "$EXPECT" ] && set -- "$@" --expect "$EXPECT"
+[ -d "$TEXTFILE_DIR" ] && set -- "$@" --textfile "$TEXTFILE_DIR/predge_ready.prom"
+exec "$PREDGE_READY" "$@"

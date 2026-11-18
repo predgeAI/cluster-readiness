@@ -1,0 +1,4 @@
+ResmanDebugLevel: 4294967295
+RmProfilingAdminOnly: 0
+EnableGpuFirmware: 18
+NVreg_OpenRmEnableUnsupportedGpus: 1

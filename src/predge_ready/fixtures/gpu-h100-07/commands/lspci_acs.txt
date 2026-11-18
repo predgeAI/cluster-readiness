@@ -1,0 +1,4 @@
+00:01.0 PCI bridge: Intel Corporation Device 09ab (rev 04) (prog-if 00 [Normal decode])
+	Capabilities: <access denied>
+17:00.0 3D controller: NVIDIA Corporation GA102GL [A40] (rev a1)
+	Capabilities: <access denied>

@@ -1,0 +1,5 @@
+slurmd.service loaded active running Slurm node daemon
+nvidia-dcgm.service loaded active running NVIDIA DCGM service
+nvidia-fabricmanager.service loaded active running NVIDIA fabric manager service
+nvidia-persistenced.service loaded active running NVIDIA Persistence Daemon
+predge-ready-health.timer loaded active waiting Run predge-ready health every minute

@@ -1,0 +1,7 @@
+[    0.000000] Linux version 6.8.0-87-generic (buildd@lcy02-amd64-031) (x86_64-linux-gnu-gcc-12) #88-Ubuntu SMP PREEMPT_DYNAMIC
+[   14.912331] nvidia: loading out-of-tree module taints kernel.
+[   15.102114] nvidia-nvlink: Nvlink Core is being initialized, major device number 509
+[   15.633870] NVRM: loading NVIDIA UNIX Open Kernel Module for x86_64  580.178.04  Release Build
+[   18.204561] mlx5_core 0000:1a:00.0: mlx5_pcie_event:301:(pid 1210): PCIe slot advertised sufficient power (75W).
+[   22.771045] nvidia-fabricmanager: initialized
+[   31.004412] ib_srpt MAD registration failed for mlx5_8-1.

@@ -1,0 +1,720 @@
+{
+ "source": "ClusterMAX criteria list (https://www.clustermax.ai/criteria) as read 18 Nov 2026; 8 InfiniBand MAD-key sub-items grouped as SEC-12; PRI-7 and AVA-10 added from the ClusterMAX 2.0 write-up and Expectations page. IDs are Predge's, not SemiAnalysis's.",
+ "criteria": [
+  {
+   "id": "SEC-1",
+   "category": "Security",
+   "criterion": "SOC 1 or SOC 2 Type II"
+  },
+  {
+   "id": "SEC-2",
+   "category": "Security",
+   "criterion": "ISO 27001 certification"
+  },
+  {
+   "id": "SEC-3",
+   "category": "Security",
+   "criterion": "GDPR, PCI, HIPAA, FedRAMP compliance"
+  },
+  {
+   "id": "SEC-4",
+   "category": "Security",
+   "criterion": "Ability to sell to secure government customers globally"
+  },
+  {
+   "id": "SEC-5",
+   "category": "Security",
+   "criterion": "Penetration testing conducted (provider, scope, coverage documented)"
+  },
+  {
+   "id": "SEC-6",
+   "category": "Security",
+   "criterion": "SOC 2 and pentest specifically cover the InfiniBand/RoCEv2 fabric"
+  },
+  {
+   "id": "SEC-7",
+   "category": "Security",
+   "criterion": "Security firm with high-speed IB/Ethernet expertise"
+  },
+  {
+   "id": "SEC-8",
+   "category": "Security",
+   "criterion": "VLAN isolation between tenants for RoCE"
+  },
+  {
+   "id": "SEC-9",
+   "category": "Security",
+   "criterion": "PKeys set for InfiniBand tenants"
+  },
+  {
+   "id": "SEC-10",
+   "category": "Security",
+   "criterion": "IB security keys management (SMKey, SAKey, CKey, VSKey)"
+  },
+  {
+   "id": "SEC-11",
+   "category": "Security",
+   "criterion": "AM key configuration (if SHARP is available)"
+  },
+  {
+   "id": "SEC-12",
+   "category": "Security",
+   "criterion": "Full MAD key protection and UFM hardening (8 sub-items: randomized MAD keys, GUID allow-list, service_key, enhanced SA trust, MAD limiter, DoS protection, source-LID rate limiting, SR-IOV with QP0/MAD disabled)"
+  },
+  {
+   "id": "SEC-13",
+   "category": "Security",
+   "criterion": "Strong tenant isolation (not namespace or container-only)"
+  },
+  {
+   "id": "SEC-14",
+   "category": "Security",
+   "criterion": "Protection against container escalation vulnerabilities"
+  },
+  {
+   "id": "SEC-15",
+   "category": "Security",
+   "criterion": "NVIDIA Container Toolkit updated (CVE-2024-0132 and related)"
+  },
+  {
+   "id": "SEC-16",
+   "category": "Security",
+   "criterion": "Protection against CVE-2025-23359, CVE-2025-23266"
+  },
+  {
+   "id": "SEC-17",
+   "category": "Security",
+   "criterion": "Every component at or above the published ClusterMAX minimum versions (driver, runtime, NIC/DPU firmware, host packages)"
+  },
+  {
+   "id": "SEC-18",
+   "category": "Security",
+   "criterion": "Member of NVIDIA security program (embargoed patches)"
+  },
+  {
+   "id": "SEC-19",
+   "category": "Security",
+   "criterion": "Automated rollout of new NVIDIA Container Toolkit on CVE discovery"
+  },
+  {
+   "id": "SEC-20",
+   "category": "Security",
+   "criterion": "Process in place for future security improvements (patch policy, customer notifications)"
+  },
+  {
+   "id": "LIF-1",
+   "category": "Lifecycle",
+   "criterion": "Transparent onboarding costs and delivery timelines that are met"
+  },
+  {
+   "id": "LIF-2",
+   "category": "Lifecycle",
+   "criterion": "No punitive data egress / offboarding fees"
+  },
+  {
+   "id": "LIF-3",
+   "category": "Lifecycle",
+   "criterion": "Easy, well-documented onboarding (console or API/CLI/Terraform)"
+  },
+  {
+   "id": "LIF-4",
+   "category": "Lifecycle",
+   "criterion": "Delivery date accuracy and meeting expectations"
+  },
+  {
+   "id": "LIF-5",
+   "category": "Lifecycle",
+   "criterion": "Knowledge of industry experts (e.g., Sylvain)"
+  },
+  {
+   "id": "LIF-6",
+   "category": "Lifecycle",
+   "criterion": "CPU head node for Slurm provisioned without explicit request"
+  },
+  {
+   "id": "LIF-7",
+   "category": "Lifecycle",
+   "criterion": "Understanding of standard ML user expectations"
+  },
+  {
+   "id": "LIF-8",
+   "category": "Lifecycle",
+   "criterion": "Out-of-the-box GPUDirect RDMA (NIC to GPU)"
+  },
+  {
+   "id": "LIF-9",
+   "category": "Lifecycle",
+   "criterion": "Out-of-the-box IB/RoCEv2 and NVIDIA driver configuration"
+  },
+  {
+   "id": "LIF-10",
+   "category": "Lifecycle",
+   "criterion": "Performance optimization libraries (e.g., Together AI kernel collection)"
+  },
+  {
+   "id": "LIF-11",
+   "category": "Lifecycle",
+   "criterion": "Audit logs cover resource actions, admin actions (roles, login success/failure) and billing events"
+  },
+  {
+   "id": "LIF-12",
+   "category": "Lifecycle",
+   "criterion": "Audit entries include actor identity (user, email, IP), action, target, timestamp, status"
+  },
+  {
+   "id": "LIF-13",
+   "category": "Lifecycle",
+   "criterion": "Audit logs queryable via API with filters (resource type, project, user, date)"
+  },
+  {
+   "id": "LIF-14",
+   "category": "Lifecycle",
+   "criterion": "Minimum 90-day audit log retention with export"
+  },
+  {
+   "id": "LIF-15",
+   "category": "Lifecycle",
+   "criterion": "Audit log access restricted to admins, no extra charge"
+  },
+  {
+   "id": "ORC-1",
+   "category": "Orchestration",
+   "criterion": "Easy process for adding new cluster users"
+  },
+  {
+   "id": "ORC-2",
+   "category": "Orchestration",
+   "criterion": "RBAC and SSO implementation"
+  },
+  {
+   "id": "ORC-3",
+   "category": "Orchestration",
+   "criterion": "No SSH key copying required"
+  },
+  {
+   "id": "ORC-4",
+   "category": "Orchestration",
+   "criterion": "Storage RBAC enforcement"
+  },
+  {
+   "id": "ORC-5",
+   "category": "Orchestration",
+   "criterion": "Cluster sharing and metering with chargeback/showback"
+  },
+  {
+   "id": "ORC-6",
+   "category": "Orchestration",
+   "criterion": "CUDA_VISIBLE_DEVICES properly configured"
+  },
+  {
+   "id": "SLU-1",
+   "category": "Orchestration: Slurm",
+   "criterion": "Automated setup process for Slurm"
+  },
+  {
+   "id": "SLU-2",
+   "category": "Orchestration: Slurm",
+   "criterion": "Automated managed Slurm service"
+  },
+  {
+   "id": "SLU-3",
+   "category": "Orchestration: Slurm",
+   "criterion": "Self-service capabilities (scale, settings)"
+  },
+  {
+   "id": "SLU-4",
+   "category": "Orchestration: Slurm",
+   "criterion": "Head node provisioning"
+  },
+  {
+   "id": "SLU-5",
+   "category": "Orchestration: Slurm",
+   "criterion": "Out-of-the-box Slurm topology configuration (topology.yaml/conf)"
+  },
+  {
+   "id": "SLU-6",
+   "category": "Orchestration: Slurm",
+   "criterion": "Slurm modules availability (Lmod)"
+  },
+  {
+   "id": "SLU-7",
+   "category": "Orchestration: Slurm",
+   "criterion": "Pyxis container plugin support"
+  },
+  {
+   "id": "K8S-1",
+   "category": "Orchestration: Kubernetes",
+   "criterion": "Automated setup process for Kubernetes"
+  },
+  {
+   "id": "K8S-2",
+   "category": "Orchestration: Kubernetes",
+   "criterion": "Automated managed Kubernetes service"
+  },
+  {
+   "id": "K8S-3",
+   "category": "Orchestration: Kubernetes",
+   "criterion": "kubectl access or KUBECONFIG provided"
+  },
+  {
+   "id": "K8S-4",
+   "category": "Orchestration: Kubernetes",
+   "criterion": "Easy access to Kubernetes Dashboard, Lens, etc."
+  },
+  {
+   "id": "K8S-5",
+   "category": "Orchestration: Kubernetes",
+   "criterion": "Storage accessible via PVC + hostPath + S3"
+  },
+  {
+   "id": "STO-1",
+   "category": "Storage",
+   "criterion": "High-performance parallel filesystem out of the box (e.g., Weka, DDN, VAST)"
+  },
+  {
+   "id": "STO-2",
+   "category": "Storage",
+   "criterion": "Out-of-the-box managed S3-compatible object storage"
+  },
+  {
+   "id": "STO-3",
+   "category": "Storage",
+   "criterion": "Kubernetes PVCs / StorageClass including ReadWriteMany"
+  },
+  {
+   "id": "STO-4",
+   "category": "Storage",
+   "criterion": "Storage mounts correctly and stays mounted"
+  },
+  {
+   "id": "STO-5",
+   "category": "Storage",
+   "criterion": "Read and write performance measured and within expectations"
+  },
+  {
+   "id": "STO-6",
+   "category": "Storage",
+   "criterion": "Throughput and latency measurements documented"
+  },
+  {
+   "id": "STO-7",
+   "category": "Storage",
+   "criterion": "Storage scales in performance and capacity, demonstrably"
+  },
+  {
+   "id": "STO-8",
+   "category": "Storage",
+   "criterion": "Automated backups with configurable retention"
+  },
+  {
+   "id": "STO-9",
+   "category": "Storage",
+   "criterion": "Cross-region replication or backup for DR"
+  },
+  {
+   "id": "STO-10",
+   "category": "Storage",
+   "criterion": "Point-in-time recovery for managed databases"
+  },
+  {
+   "id": "STO-11",
+   "category": "Storage",
+   "criterion": "Snapshot support (CSI snapshots, filesystem snapshots)"
+  },
+  {
+   "id": "STO-12",
+   "category": "Storage",
+   "criterion": "Immutable / WORM-capable storage (object lock, retention)"
+  },
+  {
+   "id": "STO-13",
+   "category": "Storage",
+   "criterion": "Published durability and availability SLAs for all storage tiers"
+  },
+  {
+   "id": "STO-14",
+   "category": "Storage",
+   "criterion": "Backup encryption at rest/in transit with customer-managed keys"
+  },
+  {
+   "id": "STO-15",
+   "category": "Storage",
+   "criterion": "Centralized backup monitoring, alerting and restore validation"
+  },
+  {
+   "id": "STO-16",
+   "category": "Storage",
+   "criterion": "Checkpoint storage durability (replication factor, cross-AZ/region)"
+  },
+  {
+   "id": "NET-1",
+   "category": "Networking",
+   "criterion": "Out-of-the-box Slurm topology configuration"
+  },
+  {
+   "id": "NET-2",
+   "category": "Networking",
+   "criterion": "InfiniBand or RoCEv2 support"
+  },
+  {
+   "id": "NET-3",
+   "category": "Networking",
+   "criterion": "MPI via higher-performance HPC-X mpirun"
+  },
+  {
+   "id": "NET-4",
+   "category": "Networking",
+   "criterion": "/etc/nccl.conf with NCCL_IB_GID_INDEX=3 for RoCEv2"
+  },
+  {
+   "id": "NET-5",
+   "category": "Networking",
+   "criterion": "NCCL_MIN_NCHANNELS, NCCL_PROTO, NCCL_ALGO not set (auto-config)"
+  },
+  {
+   "id": "NET-6",
+   "category": "Networking",
+   "criterion": "SHARP support"
+  },
+  {
+   "id": "NET-7",
+   "category": "Networking",
+   "criterion": "4-node NCCL test within specification"
+  },
+  {
+   "id": "NET-8",
+   "category": "Networking",
+   "criterion": "PyTorch-layer network performance within spec"
+  },
+  {
+   "id": "NET-9",
+   "category": "Networking",
+   "criterion": "NCCL monitoring plugin availability"
+  },
+  {
+   "id": "NET-10",
+   "category": "Networking",
+   "criterion": "Network bandwidth and latency testing"
+  },
+  {
+   "id": "REL-1",
+   "category": "Reliability and health checks",
+   "criterion": "Network stability assessment"
+  },
+  {
+   "id": "REL-2",
+   "category": "Reliability and health checks",
+   "criterion": "MSA SLA (99%, 99.9%, etc.)"
+  },
+  {
+   "id": "REL-3",
+   "category": "Reliability and health checks",
+   "criterion": "Link flap monitoring and prevention"
+  },
+  {
+   "id": "REL-4",
+   "category": "Reliability and health checks",
+   "criterion": "GPU falling off the bus detection"
+  },
+  {
+   "id": "REL-5",
+   "category": "Reliability and health checks",
+   "criterion": "PCIe error monitoring"
+  },
+  {
+   "id": "REL-6",
+   "category": "Reliability and health checks",
+   "criterion": "Ethernet and InfiniBand event monitoring (link flaps)"
+  },
+  {
+   "id": "REL-7",
+   "category": "Reliability and health checks",
+   "criterion": "Thermal monitoring (GPU temperature)"
+  },
+  {
+   "id": "REL-8",
+   "category": "Reliability and health checks",
+   "criterion": "GPU and CPU memory stats (ECC error rate)"
+  },
+  {
+   "id": "REL-9",
+   "category": "Reliability and health checks",
+   "criterion": "NVIDIA XID and SXID error detection"
+  },
+  {
+   "id": "REL-10",
+   "category": "Reliability and health checks",
+   "criterion": "InfiniBand health monitoring (link status, error counters, PKey consistency)"
+  },
+  {
+   "id": "REL-11",
+   "category": "Reliability and health checks",
+   "criterion": "NCCL and Slurm topology health"
+  },
+  {
+   "id": "REL-12",
+   "category": "Reliability and health checks",
+   "criterion": "Kubernetes node health checks"
+  },
+  {
+   "id": "REL-13",
+   "category": "Reliability and health checks",
+   "criterion": "NVLink connectivity and error tracking"
+  },
+  {
+   "id": "REL-14",
+   "category": "Reliability and health checks",
+   "criterion": "Driver and core library version consistency across nodes"
+  },
+  {
+   "id": "REL-15",
+   "category": "Reliability and health checks",
+   "criterion": "ECC error detection"
+  },
+  {
+   "id": "REL-16",
+   "category": "Reliability and health checks",
+   "criterion": "Temperature monitoring and throttling alerts"
+  },
+  {
+   "id": "REL-17",
+   "category": "Reliability and health checks",
+   "criterion": "Power monitoring and utilization tracking"
+  },
+  {
+   "id": "REL-18",
+   "category": "Reliability and health checks",
+   "criterion": "XID/SXID detection through DCGM"
+  },
+  {
+   "id": "REL-19",
+   "category": "Reliability and health checks",
+   "criterion": "PCIe bus and power state health"
+  },
+  {
+   "id": "REL-20",
+   "category": "Reliability and health checks",
+   "criterion": "IPMI exporter and fan speed monitoring"
+  },
+  {
+   "id": "REL-21",
+   "category": "Reliability and health checks",
+   "criterion": "InfiniBand link status validation (ibstat)"
+  },
+  {
+   "id": "REL-22",
+   "category": "Reliability and health checks",
+   "criterion": "Error counter monitoring (retries, dropped packets)"
+  },
+  {
+   "id": "REL-23",
+   "category": "Reliability and health checks",
+   "criterion": "Partition Key (PKey) consistency across nodes"
+  },
+  {
+   "id": "REL-24",
+   "category": "Reliability and health checks",
+   "criterion": "NCCL operation health tracking (stalled jobs)"
+  },
+  {
+   "id": "REL-25",
+   "category": "Reliability and health checks",
+   "criterion": "Automated node draining and replacement"
+  },
+  {
+   "id": "MON-1",
+   "category": "Monitoring",
+   "criterion": "ncu profiling available for all users"
+  },
+  {
+   "id": "MON-2",
+   "category": "Monitoring",
+   "criterion": "Out-of-the-box detailed managed Grafana"
+  },
+  {
+   "id": "MON-3",
+   "category": "Monitoring",
+   "criterion": "Automated active and passive health checks"
+  },
+  {
+   "id": "MON-4",
+   "category": "Monitoring",
+   "criterion": "Burn-in test documentation"
+  },
+  {
+   "id": "MON-5",
+   "category": "Monitoring",
+   "criterion": "TFLOPs estimation tracking"
+  },
+  {
+   "id": "MON-6",
+   "category": "Monitoring",
+   "criterion": "Comprehensive passive health check implementation"
+  },
+  {
+   "id": "MON-7",
+   "category": "Monitoring",
+   "criterion": "Automated active health check implementation"
+  },
+  {
+   "id": "MON-8",
+   "category": "Monitoring",
+   "criterion": "Automatic node draining for detected issues"
+  },
+  {
+   "id": "MON-9",
+   "category": "Monitoring",
+   "criterion": "Predictive failure detection (ML)"
+  },
+  {
+   "id": "MON-10",
+   "category": "Monitoring",
+   "criterion": "Real-time system monitoring"
+  },
+  {
+   "id": "MON-11",
+   "category": "Monitoring",
+   "criterion": "Alerting capabilities"
+  },
+  {
+   "id": "MON-12",
+   "category": "Monitoring",
+   "criterion": "Diagnostic tools"
+  },
+  {
+   "id": "MON-13",
+   "category": "Monitoring",
+   "criterion": "Performance tracking"
+  },
+  {
+   "id": "MON-14",
+   "category": "Monitoring",
+   "criterion": "Resource utilization monitoring"
+  },
+  {
+   "id": "MON-15",
+   "category": "Monitoring",
+   "criterion": "sacct integration for job accounting"
+  },
+  {
+   "id": "MON-16",
+   "category": "Monitoring",
+   "criterion": "DCGM health checks plugged into Slurm HealthCheckProgram"
+  },
+  {
+   "id": "PRI-1",
+   "category": "Pricing and billing",
+   "criterion": "Reasonable $/GPU/hour pricing"
+  },
+  {
+   "id": "PRI-2",
+   "category": "Pricing and billing",
+   "criterion": "Consumption options (3y, 1y, 6m, 3m, 1m)"
+  },
+  {
+   "id": "PRI-3",
+   "category": "Pricing and billing",
+   "criterion": "Individual charges for storage, compute, network"
+  },
+  {
+   "id": "PRI-4",
+   "category": "Pricing and billing",
+   "criterion": "Expansion and extension of existing contracts"
+  },
+  {
+   "id": "PRI-5",
+   "category": "Pricing and billing",
+   "criterion": "Latest GPU availability and timeline"
+  },
+  {
+   "id": "PRI-6",
+   "category": "Pricing and billing",
+   "criterion": "Kernel library availability for MFU boosting"
+  },
+  {
+   "id": "PRI-7",
+   "category": "Pricing and billing",
+   "criterion": "No billing for unusable time (cluster creation, failed creates, hardware outages) [stressed in ClusterMAX 2.0]"
+  },
+  {
+   "id": "PAR-1",
+   "category": "Partnerships",
+   "criterion": "AMD or NVIDIA investment"
+  },
+  {
+   "id": "PAR-2",
+   "category": "Partnerships",
+   "criterion": "NVIDIA NCP or Lepton certification"
+  },
+  {
+   "id": "PAR-3",
+   "category": "Partnerships",
+   "criterion": "AMD Cloud Alliance status"
+  },
+  {
+   "id": "PAR-4",
+   "category": "Partnerships",
+   "criterion": "SchedMD partnership"
+  },
+  {
+   "id": "PAR-5",
+   "category": "Partnerships",
+   "criterion": "Participation in industry events"
+  },
+  {
+   "id": "PAR-6",
+   "category": "Partnerships",
+   "criterion": "Ecosystem support and integration"
+  },
+  {
+   "id": "AVA-1",
+   "category": "Availability and support",
+   "criterion": "Latest and greatest GPU models available"
+  },
+  {
+   "id": "AVA-2",
+   "category": "Availability and support",
+   "criterion": "Current GPU models (H100, H200, A100, L40S, MI300X)"
+  },
+  {
+   "id": "AVA-3",
+   "category": "Availability and support",
+   "criterion": "Total GPU quantity and cluster-scale experience"
+  },
+  {
+   "id": "AVA-4",
+   "category": "Availability and support",
+   "criterion": "Availability / utilization rates"
+  },
+  {
+   "id": "AVA-5",
+   "category": "Availability and support",
+   "criterion": "Capacity planning capabilities"
+  },
+  {
+   "id": "AVA-6",
+   "category": "Availability and support",
+   "criterion": "Roadmap for future GPU acquisitions"
+  },
+  {
+   "id": "AVA-7",
+   "category": "Availability and support",
+   "criterion": "B200, B300, GB200 NVL72 availability timeline"
+  },
+  {
+   "id": "AVA-8",
+   "category": "Availability and support",
+   "criterion": "MI355X availability planning"
+  },
+  {
+   "id": "AVA-9",
+   "category": "Availability and support",
+   "criterion": "Geographic reach and service accessibility"
+  },
+  {
+   "id": "AVA-10",
+   "category": "Availability and support",
+   "criterion": "24x7 support with response commitments [Expectations page]"
+  }
+ ]
+}

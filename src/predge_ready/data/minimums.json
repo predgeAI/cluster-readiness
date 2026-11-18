@@ -1,0 +1,32 @@
+{
+ "source": "Snapshot of minimum-versions.json from the clustermax 0.3.0 package (SemiAnalysis, Apache-2.0), generated 2026-10-31T07:19:59Z. Override with --minimums PATH or refresh from https://semianalysisai.github.io/ClusterMAX/minimum-versions.json.",
+ "nvidiaDriverBranches": {
+  "535": "535.309.01",
+  "570": "570.211.01",
+  "580": "580.178.04",
+  "590": "590.48.01",
+  "595": "595.91.07",
+  "610": "610.57.04",
+  "615": "615.71.09"
+ },
+ "nvidiaContainerToolkit": "1.19.1",
+ "cudaToolkit": "13.1",
+ "dcgm": "4.5.3",
+ "dcgmExporter": "4.8.2",
+ "docker": "29.9.2",
+ "connectxFirmwareTrains": {
+  "28": "4702",
+  "32": "1908",
+  "35": "8002",
+  "39": "8002",
+  "43": "8002",
+  "46": "3008"
+ },
+ "advisories": {
+  "nvidiaDriver": "https://nvidia.custhelp.com/app/answers/detail/a_id/5861/",
+  "nvidiaContainerToolkit": "https://nvidia.custhelp.com/app/answers/detail/a_id/5850/",
+  "cudaToolkit": "https://nvidia.custhelp.com/app/answers/detail/a_id/5755/",
+  "dcgm": "https://nvidia.custhelp.com/app/answers/detail/a_id/5857/",
+  "connectxFirmware": "https://nvidia.custhelp.com/app/answers/detail/a_id/5699/"
+ }
+}

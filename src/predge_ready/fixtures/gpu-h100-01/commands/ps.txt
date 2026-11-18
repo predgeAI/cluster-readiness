@@ -1,0 +1,9 @@
+systemd /sbin/init
+slurmd /usr/sbin/slurmd --systemd
+nv-hostengine /usr/bin/nv-hostengine -n --service-account nvidia-dcgm
+dcgm-exporter /usr/bin/dcgm-exporter -f /etc/dcgm-exporter/dcp-metrics-included.csv
+node_exporter /usr/local/bin/node_exporter --collector.textfile.directory=/var/lib/node_exporter/textfile_collector
+ipmi_exporter /usr/local/bin/ipmi_exporter --config.file=/etc/ipmi_exporter.yml
+nvidia-persistenced /usr/bin/nvidia-persistenced --user nvidia-persistenced
+nv-fabricmanager /usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg
+promtail /usr/local/bin/promtail -config.file=/etc/promtail/config.yml

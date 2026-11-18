@@ -1,0 +1,4 @@
+systemd /sbin/init
+slurmd /usr/sbin/slurmd --systemd
+node_exporter /usr/local/bin/node_exporter
+nv-fabricmanager /usr/bin/nv-fabricmanager -c /usr/share/nvidia/nvswitch/fabricmanager.cfg

@@ -1,0 +1,2 @@
+2026-11-18T03:12:01+0000 gpu-a40-03 kernel: NVRM: loading NVIDIA UNIX x86_64 Kernel Module  550.127.05  Tue Oct  8 03:22:07 UTC 2024
+2026-11-18T07:44:19+0000 gpu-a40-03 kernel: NVRM: Xid (PCI:0000:17:00): 13, pid=88120, name=python, Graphics Exception: ESR 0x404600=0x80000010

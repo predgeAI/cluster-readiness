@@ -1,0 +1,10 @@
+NodeName=gpu-h100-02 Arch=x86_64 CoresPerSocket=56
+   CPUAlloc=0 CPUEfctv=224 CPUTot=224 CPULoad=0.41
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:h100:8(S:0-1)
+   NodeAddr=gpu-h100-02 NodeHostName=gpu-h100-02 Version=25.05.6
+   OS=Linux 6.8.0-87-generic #88-Ubuntu SMP
+   RealMemory=2063000 AllocMem=0 FreeMem=2011234 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=2 TmpDisk=0 Weights=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu

@@ -1,0 +1,16 @@
+/sys/class/infiniband/mlx5_0/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_0/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_1/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_1/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_2/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_2/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_3/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_3/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_4/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_4/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_5/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_5/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_6/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_6/ports/1/pkeys/1:0x8012
+/sys/class/infiniband/mlx5_7/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_7/ports/1/pkeys/1:0x8012

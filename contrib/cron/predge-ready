@@ -1,0 +1,2 @@
+# /etc/cron.d/predge-ready : GPU health check every minute (root, so dmesg and scontrol work)
+* * * * * root /usr/local/bin/predge-ready health --drain --resume --quiet --textfile /var/lib/node_exporter/textfile_collector/predge_ready.prom >>/var/log/predge-ready.log 2>&1

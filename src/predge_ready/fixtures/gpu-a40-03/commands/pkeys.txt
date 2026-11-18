@@ -1,0 +1,2 @@
+/sys/class/infiniband/mlx5_0/ports/1/pkeys/0:0xffff
+/sys/class/infiniband/mlx5_1/ports/1/pkeys/0:0xffff

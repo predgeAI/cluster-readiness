@@ -1,0 +1,2 @@
+systemd /sbin/init
+slurmd /usr/sbin/slurmd --systemd

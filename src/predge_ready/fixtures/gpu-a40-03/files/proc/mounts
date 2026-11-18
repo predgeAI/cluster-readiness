@@ -1,0 +1,2 @@
+/dev/sda2 / ext4 rw,relatime 0 0
+10.40.0.10:/home /home nfs4 rw,relatime,vers=4.2 0 0

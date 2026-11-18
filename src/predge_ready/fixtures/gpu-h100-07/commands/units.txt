@@ -1,0 +1,2 @@
+slurmd.service loaded active running Slurm node daemon
+nvidia-fabricmanager.service loaded active running NVIDIA fabric manager service
